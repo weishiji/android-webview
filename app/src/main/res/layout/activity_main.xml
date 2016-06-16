@@ -12,5 +12,6 @@
     <WebView
         android:id="@+id/activity_main_wv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></WebView>
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
 </RelativeLayout>
