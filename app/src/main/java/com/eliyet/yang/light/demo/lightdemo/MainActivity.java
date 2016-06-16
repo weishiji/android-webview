@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Window;
 import android.webkit.ClientCertRequest;
@@ -52,15 +53,21 @@ public class MainActivity extends AppCompatActivity {
                 view.loadUrl(url);
                 return true;
             }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                activity.setTitle(view.getTitle());
+            }
+
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                activity.setTitle("Loading...");
+            }
         });
         mWebView.setWebChromeClient(new WebChromeClient(){
             @Override
             public void onReceivedTitle(WebView view, String title) {
                 activity.setTitle(title);
-            }
-            @Override
-            public void onProgressChanged(WebView view, int newProgress) {
-                activity.setProgress(newProgress * 1000);
             }
         });
 
