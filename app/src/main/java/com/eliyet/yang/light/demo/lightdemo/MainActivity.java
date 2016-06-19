@@ -1,6 +1,8 @@
 package com.eliyet.yang.light.demo.lightdemo;
 
+
 import android.annotation.SuppressLint;
+import com.appsflyer.AppsFlyerLib;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -21,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //TODO:替换Dev_Key
+        AppsFlyerLib.getInstance().startTracking(this.getApplication(),"[Dev_Key]");
 
         initWebView();
 
