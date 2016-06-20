@@ -21,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //TODO:替换Dev_Key
-        AppsFlyerLib.getInstance().startTracking(this.getApplication(),"[Dev_Key]");
+        AppsFlyerLib.getInstance().startTracking(this.getApplication(),"5BQrHzb5t82fhgKjPhLkCN");
 
         initWebView();
 
