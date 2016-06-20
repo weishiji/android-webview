@@ -1,4 +1,4 @@
-package com.eliyet.yang.light.demo.lightdemo;
+package com.chicv.stylewe;
 
 
 import android.annotation.SuppressLint;
@@ -7,12 +7,9 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Window;
-import android.webkit.ClientCertRequest;
 import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
