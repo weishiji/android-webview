@@ -41,11 +41,16 @@ public class MainActivity extends AppCompatActivity {
         // Get Web view
         mWebView = (WebView) findViewById(R.id.activity_main_wv);
 
+
         //to the WebView in the main.xml
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setSupportZoom(true);       //Zoom Control on web (You don't need this
         //if ROM supports Multi-Touch
         mWebView.getSettings().setBuiltInZoomControls(true); //Enab
+
+        //set web view user agent
+        String ua = mWebView.getSettings().getUserAgentString();
+        mWebView.getSettings().setUserAgentString(ua+"; Stylewe Android App");
 
 
         mWebView.setWebViewClient(new WebViewClient(){
